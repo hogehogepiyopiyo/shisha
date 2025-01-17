@@ -11,7 +11,12 @@ fetch('flavors.json')
   })
   .then(data => {
     flavors = data;
+    console.log('フレーバーデータ:', flavors); // デバッグ用
   })
+  .catch(error => {
+    console.error('フレーバーデータ読み込みエラー:', error);
+  });
+
   .catch(error => {
     console.error('フレーバーの読み込みエラー:', error);
     alert('フレーバーデータの読み込みに失敗しました。');
@@ -45,7 +50,10 @@ function displayResult(randomFlavors) {
 // フォーム送信時の処理
 flavorForm.addEventListener('submit', (event) => {
   event.preventDefault(); // ページリロードを防止
+  console.log('フォームが送信されました'); // デバッグ用
+
   const flavorCount = parseInt(flavorCountSelect.value, 10);
+  console.log('選択されたフレーバー数:', flavorCount); // デバッグ用
 
   if (flavorCount && flavors.length > 0) {
     const randomFlavors = generateRandomFlavors(flavorCount);
@@ -55,12 +63,19 @@ flavorForm.addEventListener('submit', (event) => {
   }
 });
 
+
 // 再抽選ボタンの処理
 retryButton.addEventListener('click', () => {
+  console.log('再抽選ボタンが押されました'); // デバッグ用
+
   const flavorCount = parseInt(flavorCountSelect.value, 10);
+  console.log('選択されたフレーバー数:', flavorCount); // デバッグ用
 
   if (flavorCount && flavors.length > 0) {
     const randomFlavors = generateRandomFlavors(flavorCount);
+    console.log('再抽選結果:', randomFlavors); // デバッグ用
     displayResult(randomFlavors);
   }
 });
+
+
