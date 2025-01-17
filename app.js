@@ -43,12 +43,6 @@ function displayResult(randomFlavors) {
     flavorList.appendChild(listItem);
   });
 
-  // Xに投稿するボタンを更新
-  const tweetButton = document.getElementById('tweetButton');
-  const tweetText = `シーシャミックスおみくじリザルト: ${randomFlavors.join(', ')} `;
-  const tweetUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(tweetText)}`;
-  tweetButton.href = tweetUrl;
-  tweetButton.classList.remove('hidden'); // ボタンを表示
 
   // 結果エリアを表示
   resultDiv.classList.remove('hidden');
