@@ -4,6 +4,7 @@ let flavors = [];
 // flavors.json のデータを読み込む
 fetch('flavors.json')
   .then(response => {
+    console.log('レスポンスステータス:', response.status); // ステータスコードを表示
     if (!response.ok) {
       throw new Error(`HTTPエラー! ステータス: ${response.status}`);
     }
@@ -17,6 +18,7 @@ fetch('flavors.json')
     console.error('フレーバーデータ読み込みエラー:', error);
     alert('フレーバーデータの読み込みに失敗しました。');
   });
+
 
 // フォームと結果表示エリアの取得
 const flavorForm = document.getElementById('flavorForm');
