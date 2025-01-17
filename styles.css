@@ -106,3 +106,22 @@ button:hover {
 #retryButton:hover {
   background-color: #005bb5;
 }
+
+/* Xに投稿するボタンのデザイン */
+#tweetButton {
+  margin-top: 1rem;
+  padding: 0.8rem 1.2rem;
+  background-color: #1da1f2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1rem;
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+}
+
+#tweetButton:hover {
+  background-color: #1a91da;
+}
