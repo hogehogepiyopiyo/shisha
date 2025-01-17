@@ -15,10 +15,6 @@ fetch('flavors.json')
   })
   .catch(error => {
     console.error('フレーバーデータ読み込みエラー:', error);
-  });
-
-  .catch(error => {
-    console.error('フレーバーの読み込みエラー:', error);
     alert('フレーバーデータの読み込みに失敗しました。');
   });
 
@@ -63,7 +59,6 @@ flavorForm.addEventListener('submit', (event) => {
   }
 });
 
-
 // 再抽選ボタンの処理
 retryButton.addEventListener('click', () => {
   console.log('再抽選ボタンが押されました'); // デバッグ用
@@ -77,5 +72,4 @@ retryButton.addEventListener('click', () => {
     displayResult(randomFlavors);
   }
 });
-
 
