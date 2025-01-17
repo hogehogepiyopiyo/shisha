@@ -36,13 +36,22 @@ function generateRandomFlavors(count) {
 // 結果を表示
 function displayResult(randomFlavors) {
   flavorList.innerHTML = ''; // リストを初期化
+
   randomFlavors.forEach(flavor => {
     const listItem = document.createElement('li');
     listItem.textContent = flavor;
     flavorList.appendChild(listItem);
   });
 
-  resultDiv.classList.remove('hidden'); // 結果エリアを表示
+  // Xに投稿するボタンを更新
+  const tweetButton = document.getElementById('tweetButton');
+  const tweetText = `シーシャミックスおみくじリザルト: ${randomFlavors.join(', ')} `;
+  const tweetUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(tweetText)}`;
+  tweetButton.href = tweetUrl;
+  tweetButton.classList.remove('hidden'); // ボタンを表示
+
+  // 結果エリアを表示
+  resultDiv.classList.remove('hidden');
 }
 
 // フォーム送信時の処理
