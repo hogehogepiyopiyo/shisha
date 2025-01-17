@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>シーシャフレーバーミックス提案アプリ</title>
+  <title>今日のミックス</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="container">
-    <h1>シーシャフレーバーミックス</h1>
+    <h1>今日のミックス</h1>
     <p>何種類のフレーバーを使いますか？</p>
     <form id="flavorForm">
       <label for="flavorCount">フレーバー数を選択:</label>
@@ -19,10 +19,10 @@
         <option value="3">3種類</option>
         <option value="4">4種類</option>
       </select>
-      <button type="submit">提案を表示</button>
+      <button type="submit">つくる</button>
     </form>
     <div id="result" class="hidden">
-      <h2>提案されたミックス</h2>
+      <h2>このミックスでつくる</h2>
       <ul id="flavorList"></ul>
       <button id="retryButton">再抽選</button>
     </div>
