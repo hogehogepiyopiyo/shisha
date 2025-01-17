@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>シーシャフレーバーミックス提案アプリ</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>シーシャフレーバーミックス</h1>
+    <p>何種類のフレーバーを使いますか？</p>
+    <form id="flavorForm">
+      <label for="flavorCount">フレーバー数を選択:</label>
+      <select id="flavorCount" required>
+        <option value="" disabled selected>選択してください</option>
+        <option value="1">1種類</option>
+        <option value="2">2種類</option>
+        <option value="3">3種類</option>
+        <option value="4">4種類</option>
+      </select>
+      <button type="submit">提案を表示</button>
+    </form>
+    <div id="result" class="hidden">
+      <h2>提案されたミックス</h2>
+      <ul id="flavorList"></ul>
+      <button id="retryButton">再抽選</button>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
